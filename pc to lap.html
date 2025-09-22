@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        div {
+            border: 2px solid;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 3fr 2fr;
+            grid-template-areas:
+                'd1 d2 d2'
+                'd3 d3 d3'
+                'd4 d5 d6';
+            gap: 0.5cm;
+            height: 5cm;
+        }
+
+        .d1 {
+            grid-area: d1;
+            grid-row: 1;
+            background-color: green;
+        }
+
+        .d2 {
+            grid-area: d2;
+            grid-column: span 2;
+            background-color: bisque;
+        }
+
+        .d3 {
+            grid-area: d3;
+            grid-column: span 3;
+            background-color: green;
+        }
+
+        .d4 {
+            grid-area: d4;
+            background-color: bisque;
+        }
+
+        .d5 {
+            grid-area: d5;
+            background-color: bisque;
+        }
+
+        .d6 {
+            grid-area: d6;
+            background-color: bisque;
+        }
+        article{
+            display: flex;
+            column-gap: 0.5cm;
+        }
+        @media (max-width:768px) {
+            section {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 3fr 2fr;
+                grid-template-areas:
+                    'd1 d2 d2'
+                    'd3 d3 d3'
+                    'd4 d5 d6';
+                gap: 0.3cm;
+                height: 11cm;
+            }
+
+            .d1 {
+                grid-area: d1;
+                grid-row: 1;
+                background-color: green;
+            }
+
+            .d2 {
+                grid-area: d2;
+                grid-column: span 2;
+                background-color: bisque;
+            }
+
+            .d3 {
+                grid-area: d3;
+                grid-column: span 3;
+                background-color: green;
+            }
+
+            .d4 {
+                grid-area: d4;
+                background-color: bisque;
+            }
+
+            .d5 {
+                grid-area: d5;
+                background-color: bisque;
+            }
+
+            .d6 {
+                grid-area: d6;
+                background-color: bisque;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+        <div class="d6"></div>
+    </section>
+    <br>
+    <article>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nam placeat veritatis ut maxime libero
+            laboriosam, quisquam magni, et eius ea vitae illum. Accusamus autem illo, repellat accusantium consequatur
+            magnam provident itaque harum pariatur iste maiores facere architecto sed doloribus! Sed eaque ad quod unde
+            hic, eligendi accusamus minima explicabo.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum dolores, ea aliquid tempora tenetur
+            cumque debitis quaerat maxime omnis aliquam iure assumenda adipisci soluta sint ullam. Voluptatum inventore
+            accusantium perferendis rem minima magnam consectetur provident doloremque sunt. Quisquam facilis optio
+            corporis sequi commodi dolorem et hic ullam magnam esse!</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi neque eveniet ducimus et illo odio ipsum!
+            Voluptate, aperiam qui quibusdam, eveniet nulla voluptatem cumque blanditiis optio pariatur facilis debitis
+            autem quisquam vitae libero voluptas quam. Reiciendis eos sunt corporis itaque molestiae facilis ipsum,
+            incidunt quisquam praesentium, ea mollitia distinctio eligendi.</div>
+    </article>
+</body>
+
+</html>
